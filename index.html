@@ -1624,7 +1624,7 @@ body.dark #screen-gallery .page-hdr { background: #0d0f16; border-color: #1e2130
     <img class="hero-img" src="https://i.imgur.com/BoQY79J.jpeg" alt="Sports X Arena">
     <div class="hero-label">
       <div class="hero-label-title">Premium Padel Courts</div>
-      <div class="hero-label-sub">Open Mon–Sun · 6:00 AM – 11:30 PM</div>
+      <div class="hero-label-sub">Open Mon–Sun · 6:00 AM – 12:00 AM</div>
     </div>
   </div>
   <div class="section-title">Facilities</div>
@@ -1637,7 +1637,7 @@ body.dark #screen-gallery .page-hdr { background: #0d0f16; border-color: #1e2130
           </div>
           <div>
             <div class="facility-name">Padel Courts</div>
-            <div class="facility-price">Court 1 &amp; 2 · From MWK 60,000/hr</div>
+            <div class="facility-price">Court 1 &amp; 2 · From MWK 40,000/hr</div>
           </div>
         </div>
         <button class="btn-book-sm" onclick="event.stopPropagation();openBooking()">Book</button>
@@ -1926,7 +1926,7 @@ body.dark #screen-gallery .page-hdr { background: #0d0f16; border-color: #1e2130
     <div style="margin-top:14px">
       <div class="contact-row" onclick="window.location.href='tel:+265999000000'"><div class="contact-icon">📞</div>+265 999 000 000</div>
       <div class="contact-row" onclick="window.location.href='mailto:info@sportsxarena.com'"><div class="contact-icon">📧</div>info@sportsxarena.com</div>
-      <div class="contact-row"><div class="contact-icon">🕐</div>Mon–Sun: 6:00 AM – 11:30 PM</div>
+      <div class="contact-row"><div class="contact-icon">🕐</div>Mon–Sun: 6:00 AM – 12:00 AM</div>
     </div>
   </div>
 </div>
@@ -2470,17 +2470,17 @@ const LADIES = [
   { time:'11:15 AM – 12:15 PM', price:40000, duration:'1 Hour', session:'ladies', label:'Ladies Only' },
 ];
 const MIXED_DAY = [
-  { time:'1:00 – 2:00 PM', price:60000, duration:'1 Hour', session:'gents', label:'Open to All' },
-  { time:'2:00 – 3:00 PM', price:60000, duration:'1 Hour', session:'gents', label:'Open to All' },
-  { time:'3:00 – 4:00 PM', price:60000, duration:'1 Hour', session:'gents', label:'Open to All' },
+  { time:'1:00 – 2:00 PM', price:40000, duration:'1 Hour', session:'gents', label:'Open to All' },
+  { time:'2:00 – 3:00 PM', price:40000, duration:'1 Hour', session:'gents', label:'Open to All' },
+  { time:'3:00 – 4:00 PM', price:40000, duration:'1 Hour', session:'gents', label:'Open to All' },
 ];
 const GENTS = [
-  { time:'4:00 – 5:30 PM',      price:75000, duration:'1.5 Hours', session:'evening', label:'Open to All' },
+  { time:'4:00 – 5:30 PM',      price:60000, duration:'1.5 Hours', session:'evening', label:'Open to All' },
   { time:'5:30 – 7:00 PM',      price:75000, duration:'1.5 Hours', session:'evening', label:'Open to All' },
   { time:'7:00 – 8:30 PM',      price:75000, duration:'1.5 Hours', session:'evening', label:'Open to All' },
   { time:'8:30 – 10:00 PM',     price:75000, duration:'1.5 Hours', session:'evening', label:'Open to All' },
-  { time:'10:00 – 11:30 PM',    price:75000, duration:'1.5 Hours', session:'evening', label:'Open to All' },
-  { time:'11:30 PM – 1:00 AM',  price:75000, duration:'1.5 Hours', session:'evening', label:'Open to All' },
+  { time:'10:00 – 11:00 PM',    price:50000, duration:'1 Hour', session:'evening', label:'Open to All' },
+  { time:'11:00 PM – 12:00 AM', price:50000, duration:'1 Hour', session:'evening', label:'Open to All' },
 ];
 const EVENING = [];
 
@@ -3005,9 +3005,9 @@ async function renderSlots() {
 
   const SESSIONS = [
     { slots: MEN,       cls:'morning', emoji:'🎾', label:'Open to All · 6:15 – 8:15 AM' },
-    { slots: LADIES,    cls:'ladies',  emoji:'👩', label:'Ladies Only · 8:15 AM – 12:15 PM' },
-    { slots: MIXED_DAY, cls:'gents',   emoji:'🎾', label:'Open to All · 1:00 – 4:00 PM · MWK 60,000' },
-    { slots: GENTS,     cls:'evening', emoji:'🌙', label:'Open to All · 4:00 PM – Midnight · MWK 75,000' },
+    { slots: LADIES,    cls:'ladies',  emoji:'👩', label:'Ladies Only · 8:15 AM – 12:15 PM · MWK 40,000' },
+    { slots: MIXED_DAY, cls:'gents',   emoji:'🎾', label:'Open to All · 1:00 – 4:00 PM · MWK 40,000' },
+    { slots: GENTS,     cls:'evening', emoji:'🌙', label:'Open to All · 4:00 PM – Midnight · MWK 50,000 – 75,000' },
   ];
 
   const c1 = bookingsByCourt['Padel Court 1'] || [];
@@ -4049,8 +4049,8 @@ window.addEventListener('beforeinstallprompt', function(e) {
             <option value="5:30 – 7:00 PM" style="background:#1a1a2e;">5:30 – 7:00 PM</option>
             <option value="7:00 – 8:30 PM" style="background:#1a1a2e;">7:00 – 8:30 PM</option>
             <option value="8:30 – 10:00 PM" style="background:#1a1a2e;">8:30 – 10:00 PM</option>
-            <option value="10:00 – 11:30 PM" style="background:#1a1a2e;">10:00 – 11:30 PM</option>
-            <option value="11:30 PM – 1:00 AM" style="background:#1a1a2e;">11:30 PM – 1:00 AM</option>
+            <option value="10:00 – 11:00 PM" style="background:#1a1a2e;">10:00 – 11:00 PM</option>
+            <option value="11:00 PM – 12:00 AM" style="background:#1a1a2e;">11:00 PM – 12:00 AM</option>
           </select>
         </div>
         <!-- Preview pill -->
@@ -4108,8 +4108,8 @@ window.addEventListener('beforeinstallprompt', function(e) {
           <option value="5:30 – 7:00 PM" style="background:#1a1a2e;">5:30 – 7:00 PM</option>
           <option value="7:00 – 8:30 PM" style="background:#1a1a2e;">7:00 – 8:30 PM</option>
           <option value="8:30 – 10:00 PM" style="background:#1a1a2e;">8:30 – 10:00 PM</option>
-          <option value="10:00 – 11:30 PM" style="background:#1a1a2e;">10:00 – 11:30 PM</option>
-          <option value="11:30 PM – 1:00 AM" style="background:#1a1a2e;">11:30 PM – 1:00 AM</option>
+          <option value="10:00 – 11:00 PM" style="background:#1a1a2e;">10:00 – 11:00 PM</option>
+          <option value="11:00 PM – 12:00 AM" style="background:#1a1a2e;">11:00 PM – 12:00 AM</option>
         </select>
         <button class="admin-btn admin-btn-amber" onclick="adminAddBlock()">Block This Slot</button>
         <div id="admin-manual-blocks" style="display:flex;flex-direction:column;gap:8px;"></div>
@@ -4189,19 +4189,19 @@ window.addEventListener('beforeinstallprompt', function(e) {
                 <option value="" style="background:#1a1a2e;">— Select Time —</option>
                 <option value="6:15 – 7:15 AM|60000|1 Hour" style="background:#1a1a2e;">6:15 – 7:15 AM</option>
                 <option value="7:15 – 8:15 AM|60000|1 Hour" style="background:#1a1a2e;">7:15 – 8:15 AM</option>
-                <option value="8:15 – 9:15 AM|60000|1 Hour" style="background:#1a1a2e;">8:15 – 9:15 AM</option>
-                <option value="9:15 – 10:15 AM|60000|1 Hour" style="background:#1a1a2e;">9:15 – 10:15 AM</option>
-                <option value="10:15 – 11:15 AM|60000|1 Hour" style="background:#1a1a2e;">10:15 – 11:15 AM</option>
-                <option value="11:15 AM – 12:15 PM|60000|1 Hour" style="background:#1a1a2e;">11:15 AM – 12:15 PM</option>
-                <option value="1:00 – 2:00 PM|60000|1 Hour" style="background:#1a1a2e;">1:00 – 2:00 PM</option>
-                <option value="2:00 – 3:00 PM|60000|1 Hour" style="background:#1a1a2e;">2:00 – 3:00 PM</option>
-                <option value="3:00 – 4:00 PM|60000|1 Hour" style="background:#1a1a2e;">3:00 – 4:00 PM</option>
-                <option value="4:00 – 5:30 PM|75000|1.5 Hours" style="background:#1a1a2e;">4:00 – 5:30 PM</option>
+                <option value="8:15 – 9:15 AM|40000|1 Hour" style="background:#1a1a2e;">8:15 – 9:15 AM</option>
+                <option value="9:15 – 10:15 AM|40000|1 Hour" style="background:#1a1a2e;">9:15 – 10:15 AM</option>
+                <option value="10:15 – 11:15 AM|40000|1 Hour" style="background:#1a1a2e;">10:15 – 11:15 AM</option>
+                <option value="11:15 AM – 12:15 PM|40000|1 Hour" style="background:#1a1a2e;">11:15 AM – 12:15 PM</option>
+                <option value="1:00 – 2:00 PM|40000|1 Hour" style="background:#1a1a2e;">1:00 – 2:00 PM</option>
+                <option value="2:00 – 3:00 PM|40000|1 Hour" style="background:#1a1a2e;">2:00 – 3:00 PM</option>
+                <option value="3:00 – 4:00 PM|40000|1 Hour" style="background:#1a1a2e;">3:00 – 4:00 PM</option>
+                <option value="4:00 – 5:30 PM|60000|1.5 Hours" style="background:#1a1a2e;">4:00 – 5:30 PM</option>
                 <option value="5:30 – 7:00 PM|75000|1.5 Hours" style="background:#1a1a2e;">5:30 – 7:00 PM</option>
                 <option value="7:00 – 8:30 PM|75000|1.5 Hours" style="background:#1a1a2e;">7:00 – 8:30 PM</option>
                 <option value="8:30 – 10:00 PM|75000|1.5 Hours" style="background:#1a1a2e;">8:30 – 10:00 PM</option>
-                <option value="10:00 – 11:30 PM|75000|1.5 Hours" style="background:#1a1a2e;">10:00 – 11:30 PM</option>
-                <option value="11:30 PM – 1:00 AM|75000|1.5 Hours" style="background:#1a1a2e;">11:30 PM – 1:00 AM</option>
+                <option value="10:00 – 11:00 PM|50000|1 Hour" style="background:#1a1a2e;">10:00 – 11:00 PM</option>
+                <option value="11:00 PM – 12:00 AM|50000|1 Hour" style="background:#1a1a2e;">11:00 PM – 12:00 AM</option>
               </select>
             </div>
           </div>
@@ -4300,19 +4300,19 @@ window.addEventListener('beforeinstallprompt', function(e) {
             <option value="" style="background:#1a1a2e;">— Select Time Slot —</option>
             <option value="6:15 – 7:15 AM|60000|1 Hour" style="background:#1a1a2e;">6:15 – 7:15 AM · MWK 60,000</option>
             <option value="7:15 – 8:15 AM|60000|1 Hour" style="background:#1a1a2e;">7:15 – 8:15 AM · MWK 60,000</option>
-            <option value="8:15 – 9:15 AM|60000|1 Hour" style="background:#1a1a2e;">8:15 – 9:15 AM · MWK 60,000</option>
-            <option value="9:15 – 10:15 AM|60000|1 Hour" style="background:#1a1a2e;">9:15 – 10:15 AM · MWK 60,000</option>
-            <option value="10:15 – 11:15 AM|60000|1 Hour" style="background:#1a1a2e;">10:15 – 11:15 AM · MWK 60,000</option>
-            <option value="11:15 AM – 12:15 PM|60000|1 Hour" style="background:#1a1a2e;">11:15 AM – 12:15 PM · MWK 60,000</option>
-            <option value="1:00 – 2:00 PM|60000|1 Hour" style="background:#1a1a2e;">1:00 – 2:00 PM · MWK 60,000</option>
-            <option value="2:00 – 3:00 PM|60000|1 Hour" style="background:#1a1a2e;">2:00 – 3:00 PM · MWK 60,000</option>
-            <option value="3:00 – 4:00 PM|60000|1 Hour" style="background:#1a1a2e;">3:00 – 4:00 PM · MWK 60,000</option>
-            <option value="4:00 – 5:30 PM|75000|1.5 Hours" style="background:#1a1a2e;">4:00 – 5:30 PM · MWK 75,000</option>
+            <option value="8:15 – 9:15 AM|40000|1 Hour" style="background:#1a1a2e;">8:15 – 9:15 AM · MWK 40,000</option>
+            <option value="9:15 – 10:15 AM|40000|1 Hour" style="background:#1a1a2e;">9:15 – 10:15 AM · MWK 40,000</option>
+            <option value="10:15 – 11:15 AM|40000|1 Hour" style="background:#1a1a2e;">10:15 – 11:15 AM · MWK 40,000</option>
+            <option value="11:15 AM – 12:15 PM|40000|1 Hour" style="background:#1a1a2e;">11:15 AM – 12:15 PM · MWK 40,000</option>
+            <option value="1:00 – 2:00 PM|40000|1 Hour" style="background:#1a1a2e;">1:00 – 2:00 PM · MWK 40,000</option>
+            <option value="2:00 – 3:00 PM|40000|1 Hour" style="background:#1a1a2e;">2:00 – 3:00 PM · MWK 40,000</option>
+            <option value="3:00 – 4:00 PM|40000|1 Hour" style="background:#1a1a2e;">3:00 – 4:00 PM · MWK 40,000</option>
+            <option value="4:00 – 5:30 PM|60000|1.5 Hours" style="background:#1a1a2e;">4:00 – 5:30 PM · MWK 60,000</option>
             <option value="5:30 – 7:00 PM|75000|1.5 Hours" style="background:#1a1a2e;">5:30 – 7:00 PM · MWK 75,000</option>
             <option value="7:00 – 8:30 PM|75000|1.5 Hours" style="background:#1a1a2e;">7:00 – 8:30 PM · MWK 75,000</option>
             <option value="8:30 – 10:00 PM|75000|1.5 Hours" style="background:#1a1a2e;">8:30 – 10:00 PM · MWK 75,000</option>
-            <option value="10:00 – 11:30 PM|75000|1.5 Hours" style="background:#1a1a2e;">10:00 – 11:30 PM · MWK 75,000</option>
-            <option value="11:30 PM – 1:00 AM|75000|1.5 Hours" style="background:#1a1a2e;">11:30 PM – 1:00 AM · MWK 75,000</option>
+            <option value="10:00 – 11:00 PM|50000|1 Hour" style="background:#1a1a2e;">10:00 – 11:00 PM · MWK 50,000</option>
+            <option value="11:00 PM – 12:00 AM|50000|1 Hour" style="background:#1a1a2e;">11:00 PM – 12:00 AM · MWK 50,000</option>
           </select>
         </div>
         <button class="admin-btn admin-btn-green" onclick="adminOpenBookForMemberFromForm()" style="margin-top:4px;">
@@ -5235,7 +5235,7 @@ async function syncHardBlockedDates() {
   const ALL_TIMES = [
     '6:15 – 7:15 AM', '7:15 – 8:15 AM',
     '8:15 – 9:15 AM', '9:15 – 10:15 AM', '10:15 – 11:15 AM', '11:15 AM – 12:15 PM',
-    '4:00 – 5:30 PM', '5:30 – 7:00 PM', '7:00 – 8:30 PM', '8:30 – 10:00 PM', '10:00 – 11:30 PM'
+    '4:00 – 5:30 PM', '5:30 – 7:00 PM', '7:00 – 8:30 PM', '8:30 – 10:00 PM', '10:00 – 11:00 PM', '11:00 PM – 12:00 AM'
   ];
 
   const windowEnd = new Date(today);
